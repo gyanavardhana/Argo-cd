@@ -4,5 +4,5 @@ metadata:
   name: argocd-cm
   namespace: argocd
 data:
-  application.instanceLabelKey: "app.kubernetes.io/gyana"
-  application.instanceLabelValue: "{{gyana}}"
+  application.instanceLabelKey: "app.kubernetes.io/name"
+  application.instanceLabelValue: "myapp-argo-application"
