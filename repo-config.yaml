@@ -7,4 +7,4 @@ data:
   repositories: |
     - url: https://github.com/gyanavardhana/Argo-cd.git
       username: gyanavardhana
-      password: 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
+      password: ############
