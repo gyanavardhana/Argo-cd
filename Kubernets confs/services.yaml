@@ -12,14 +12,28 @@ spec:
 
 ---
 
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: web
+#spec:
+#  type: LoadBalancer  # Adding type: LoadBalancer here
+#  ports:
+#  - port: 80           # Exposing port 80 for HTTP traffic
+#    targetPort: 3000
+#  selector:
+#    app: web
+
 apiVersion: v1
 kind: Service
 metadata:
   name: web
 spec:
-  type: LoadBalancer  # Adding type: LoadBalancer here
+  type: NodePort  
   ports:
-  - port: 80           # Exposing port 80 for HTTP traffic
+  - protocol: TCP
+    port: 80           # Exposing port 80 for HTTP traffic
     targetPort: 3000
+    nodePort: 30007
   selector:
     app: web
